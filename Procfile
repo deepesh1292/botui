@@ -1,1 +1,1 @@
-web: python httpscript.py $PORT
+web: python -m http.server $PORT
