@@ -1,1 +1,1 @@
-web: python httpscript.py
+web: python -m http.server
