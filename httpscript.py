@@ -14,7 +14,7 @@ class ThreadedTCPServer(socketserver.ThreadingMixIn, socketserver.TCPServer):
     pass
 
 try:
-    server = ThreadedTCPServer(('', PORT), myHandler)
+    server = ThreadedTCPServer(('', int(PORT)), myHandler)
     print ('Started httpserver on port ' , PORT)
     ip,port = server.server_address
     server_thread = threading.Thread(target=server.serve_forever)
