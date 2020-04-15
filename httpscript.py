@@ -2,9 +2,9 @@ import http.server
 from http.server import HTTPServer, BaseHTTPRequestHandler
 import socketserver
 import threading
-import os.environ
+import os
 
-PORT = environ['PORT']
+PORT = os.environ['PORT']
 
 class myHandler(BaseHTTPRequestHandler):
     def do_GET(self):
